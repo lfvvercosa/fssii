@@ -63,7 +63,7 @@ public class Fish {
 		this.currentSolution.setPosition(position);
 		this.currentSolution.setFitness(problem
 				.evaluateSolution(currentSolution.getPosition()));
-		this.deltaFitness = currentSolution.getFitness()-currentSolution.getFitness(); 
+		this.deltaFitness = currentSolution.getFitness() - getPreviousSolution().getFitness(); 
 		
 		boolean a = this.problem.isFitnessBetterThan(currentSolution.getFitness(), previousSolution.getFitness());
 		boolean b = this.deltaFitness >=0;

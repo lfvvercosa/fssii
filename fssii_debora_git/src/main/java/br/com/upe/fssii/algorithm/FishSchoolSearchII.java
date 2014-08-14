@@ -2,6 +2,7 @@ package main.java.br.com.upe.fssii.algorithm;
 
 import java.util.Random;
 
+import src.main.java.br.com.upe.fssii.algorithm.AdaptativeParameter;
 import main.java.br.com.upe.fssii.problems.Problem;
 
 public class FishSchoolSearchII {
@@ -232,7 +233,7 @@ public class FishSchoolSearchII {
 			double temporaryPosition[] = new double[this.problem
 					.getDimensions()];
 			for (int j = 0; j < this.problem.getDimensions(); j++) {
-				temporaryPosition[i] = this.school[i].getCurrentSolution()
+				temporaryPosition[j] = this.school[i].getCurrentSolution()
 						.getPosition()[j]
 						+ (Parameters.BETA * c.getCoeficientValue() * individual[i][j])
 						+ (c.getCoeficientValue() * r.nextDouble() * instinctive[j])
