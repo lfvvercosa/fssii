@@ -1,7 +1,6 @@
 package main.java.br.com.upe.fssii.algorithm;
 
 
-
 public class AdaptativeParameter {
 	private double coeficientValue;
 	private int adaptativeDirection;

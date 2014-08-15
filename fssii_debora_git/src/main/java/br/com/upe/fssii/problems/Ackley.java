@@ -1,6 +1,5 @@
 package main.java.br.com.upe.fssii.problems;
 
-
 public class Ackley extends Problem {
 
 	public Ackley(int dimensions) {

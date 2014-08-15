@@ -5,7 +5,7 @@ public final class Parameters {
 	public static final double MINIMUM_WEIGHT = 1.0;
 	public static final double MAXIMUM_WEIGHT = 1000.0;
 	public static final int SCHOOL_SIZE = 30;
-	public static final int DIMENSION = 10;
+	public static final int DIMENSION = 30;
 	
 	
 	public static final double ALPHA = 0.1;
