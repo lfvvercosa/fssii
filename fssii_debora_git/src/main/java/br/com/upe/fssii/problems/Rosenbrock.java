@@ -1,38 +1,36 @@
-package src.main.java.br.com.upe.fssii.problems;
+package main.java.br.com.upe.fssii.problems;
 
-public class Schwefel12 extends Problem {
+public class Rosenbrock extends Problem {
 
-	public Schwefel12(int dimensions) {
+	public Rosenbrock(int dimensions) {
 		super(dimensions);
 	}
-
+	
 	@Override
 	public void init() {
-		//Do nothing
+		//do nothing
 	}
 
 	@Override
 	public double getLowerBound(int dimension) {
-		return -100;
+		return -30;
 	}
 
 	@Override
 	public double getUpperBound(int dimension) {
-		return 100;
+		return 30;
 	}
 
 	@Override
 	public double evaluateSolution(double[] solution) {
 		double fitness = 0;
-		double auxFit = 0;
 
-		for (int i = 0; i < this.dimensions; i++) {
-			for (int j = 0; j <= i; j++) {
-				auxFit += solution[j];
-			}
-			fitness += (auxFit * auxFit);
-			auxFit = 0;
+		for (int i = 0; i < this.dimensions - 1; i++) {
+			fitness += 100
+					* Math.pow(solution[i + 1] - Math.pow(solution[i], 2.0),
+							2.0) + Math.pow(solution[i] - 1.0, 2.0);
 		}
+
 		return fitness;
 	}
 

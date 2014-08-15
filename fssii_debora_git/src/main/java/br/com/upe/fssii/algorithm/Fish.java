@@ -1,8 +1,8 @@
-package src.main.java.br.com.upe.fssii.algorithm;
+package main.java.br.com.upe.fssii.algorithm;
 
 import java.util.Random;
 
-import src.main.java.br.com.upe.fssii.problems.Problem;
+import main.java.br.com.upe.fssii.problems.Problem;
 
 public class Fish {
 
@@ -65,7 +65,7 @@ public class Fish {
 				.evaluateSolution(currentSolution.getPosition()));
 		this.deltaFitness = currentSolution.getFitness() - getPreviousSolution().getFitness(); 
 		
-		boolean a = this.problem.isFitnessBetterThan(currentSolution.getFitness(), previousSolution.getFitness());
+		boolean a = this.problem.isFitnessBetterThan(currentSolution.getFitness(), getPreviousSolution().getFitness());
 		boolean b = this.deltaFitness >=0;
 		if(a == b){
 			this.fitnessGain = this.deltaFitness;	

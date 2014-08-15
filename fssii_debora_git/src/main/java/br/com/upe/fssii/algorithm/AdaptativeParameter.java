@@ -1,4 +1,4 @@
-package src.main.java.br.com.upe.fssii.algorithm;
+package main.java.br.com.upe.fssii.algorithm;
 
 
 

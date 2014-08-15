@@ -1,10 +1,10 @@
-package src.main.java.br.com.upe.fssii;
+package main.java.br.com.upe.fssii;
 
 import java.util.Random;
 
-import src.main.java.br.com.upe.fssii.algorithm.FishSchoolSearchII;
-import src.main.java.br.com.upe.fssii.algorithm.Parameters;
-import src.main.java.br.com.upe.fssii.problems.Sphere;
+import main.java.br.com.upe.fssii.algorithm.FishSchoolSearchII;
+import main.java.br.com.upe.fssii.algorithm.Parameters;
+import main.java.br.com.upe.fssii.problems.Sphere;
 
 
 public class Main {

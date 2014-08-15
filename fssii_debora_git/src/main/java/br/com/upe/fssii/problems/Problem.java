@@ -1,4 +1,4 @@
-package src.main.java.br.com.upe.fssii.problems;
+package main.java.br.com.upe.fssii.problems;
 
 public abstract class Problem {
 
