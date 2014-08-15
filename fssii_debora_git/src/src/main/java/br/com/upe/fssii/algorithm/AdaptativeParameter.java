@@ -1,6 +1,5 @@
 package src.main.java.br.com.upe.fssii.algorithm;
 
-import main.java.br.com.upe.fssii.algorithm.Parameters;
 
 
 public class AdaptativeParameter {

@@ -1,33 +1,34 @@
-package main.java.br.com.upe.fssii.problems;
+package src.main.java.br.com.upe.fssii.problems;
 
-public class Rastrigin extends Problem {
+public class Rosenbrock extends Problem {
 
-	public Rastrigin(int dimensions) {
+	public Rosenbrock(int dimensions) {
 		super(dimensions);
 	}
-
+	
 	@Override
 	public void init() {
-		//Do nothing
+		//do nothing
 	}
 
 	@Override
 	public double getLowerBound(int dimension) {
-		return -5.12;
+		return -30;
 	}
 
 	@Override
 	public double getUpperBound(int dimension) {
-		return 5.12;
+		return 30;
 	}
 
 	@Override
 	public double evaluateSolution(double[] solution) {
 		double fitness = 0;
 
-		for (int i = 0; i < this.dimensions; i++) {
-			fitness += (solution[i] * solution[i])
-					- (10 * Math.cos(2 * Math.PI * solution[i])) + 10;
+		for (int i = 0; i < this.dimensions - 1; i++) {
+			fitness += 100
+					* Math.pow(solution[i + 1] - Math.pow(solution[i], 2.0),
+							2.0) + Math.pow(solution[i] - 1.0, 2.0);
 		}
 
 		return fitness;

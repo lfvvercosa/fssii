@@ -1,4 +1,5 @@
-package main.java.br.com.upe.fssii.problems;
+package src.main.java.br.com.upe.fssii.problems;
+
 
 public class Sphere extends Problem {
 

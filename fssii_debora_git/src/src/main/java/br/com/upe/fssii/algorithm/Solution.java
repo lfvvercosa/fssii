@@ -1,4 +1,4 @@
-package main.java.br.com.upe.fssii.algorithm;
+package src.main.java.br.com.upe.fssii.algorithm;
 
 public class Solution {
 	

@@ -1,8 +1,8 @@
-package main.java.br.com.upe.fssii.algorithm;
+package src.main.java.br.com.upe.fssii.algorithm;
 
 import java.util.Random;
 
-import main.java.br.com.upe.fssii.problems.Problem;
+import src.main.java.br.com.upe.fssii.problems.Problem;
 
 public class Fish {
 

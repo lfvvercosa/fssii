@@ -1,8 +1,9 @@
-package main.java.br.com.upe.fssii.problems;
+package src.main.java.br.com.upe.fssii.problems;
 
-public class Schwefel12 extends Problem {
 
-	public Schwefel12(int dimensions) {
+public class Ackley extends Problem {
+
+	public Ackley(int dimensions) {
 		super(dimensions);
 	}
 
@@ -13,27 +14,36 @@ public class Schwefel12 extends Problem {
 
 	@Override
 	public double getLowerBound(int dimension) {
-		return -100;
+		return -32;
 	}
 
 	@Override
 	public double getUpperBound(int dimension) {
-		return 100;
+		return 32;
 	}
 
 	@Override
 	public double evaluateSolution(double[] solution) {
 		double fitness = 0;
-		double auxFit = 0;
+		double auxExp = 0;
+		double auxCos = 0;
 
 		for (int i = 0; i < this.dimensions; i++) {
-			for (int j = 0; j <= i; j++) {
-				auxFit += solution[j];
-			}
-			fitness += (auxFit * auxFit);
-			auxFit = 0;
+			auxExp += solution[i] * solution[i];
+			auxCos += Math.cos(2 * Math.PI * solution[i]);
 		}
+
+		auxExp = auxExp / this.dimensions;
+		auxExp = Math.sqrt(auxExp);
+		auxExp = auxExp * (-0.2);
+
+		auxCos = auxCos / this.dimensions;
+
+		fitness = (-1) * 20 * Math.exp(auxExp) - 1 * Math.exp(auxCos) + 20
+				+ Math.E;
+
 		return fitness;
+
 	}
 
 	@Override
