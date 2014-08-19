@@ -193,13 +193,14 @@ public class FishSchoolSearchII {
 		double maxAbsFitGain = maxAbsFitnessGain();
 		for (int i = 0; i < Parameters.SCHOOL_SIZE; i++) {
 			this.school[i].setPreviousWeight(this.school[i].getCurrentWeight());
+			//System.out.println("fish "+i+" weight = "+this.school[i].getCurrentWeight());
 			if (maxAbsFitGain != 0.0) {
 				// calculate normalized gain
 				double temp = this.school[i].getFitnessGain() / maxAbsFitGain;
 				this.school[i].setFitnessGainNormalized(temp);
 
 				temp += this.school[i].getCurrentWeight();
-
+				
 				if (temp < Parameters.MINIMUM_WEIGHT)
 					temp = Parameters.MINIMUM_WEIGHT;
 				if (temp > Parameters.MAXIMUM_WEIGHT)
@@ -232,7 +233,7 @@ public class FishSchoolSearchII {
 			double temporaryPosition[] = new double[this.problem
 					.getDimensions()];
 			for (int j = 0; j < this.problem.getDimensions(); j++) {
-				temporaryPosition[j] = this.school[i].getCurrentSolution()
+				temporaryPosition[j] = -this.school[i].getCurrentSolution()
 						.getPosition()[j]
 						+ (Parameters.BETA * c.getCoeficientValue() * individual[i][j])
 						+ (c.getCoeficientValue() * r.nextDouble() * instinctive[j])

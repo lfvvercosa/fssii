@@ -63,7 +63,7 @@ public class Fish {
 		this.currentSolution.setPosition(position);
 		this.currentSolution.setFitness(problem
 				.evaluateSolution(currentSolution.getPosition()));
-		this.deltaFitness = currentSolution.getFitness()-currentSolution.getFitness(); 
+		this.deltaFitness = currentSolution.getFitness()-previousSolution.getFitness(); 
 		
 		boolean a = this.problem.isFitnessBetterThan(currentSolution.getFitness(), previousSolution.getFitness());
 		boolean b = this.deltaFitness >=0;
@@ -73,6 +73,7 @@ public class Fish {
 		else{
 			this.fitnessGain = -this.deltaFitness;
 		}
+		//System.out.println("fitness gain = "+fitnessGain);
 	}
 
 	private double getRandomNumber(double min, double max, Random r) {

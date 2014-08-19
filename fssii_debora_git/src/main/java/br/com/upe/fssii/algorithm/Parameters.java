@@ -8,7 +8,7 @@ public final class Parameters {
 	public static final int DIMENSION = 30;
 	
 	
-	public static final double ALPHA = 0.1;
+	public static final double ALPHA = 0.01;
 	public static final double BETA = 0.4;
 	public static final double INITIAL_C = 0.1;
 	public static final double MAXIMUM_C = 0.999;
